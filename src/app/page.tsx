@@ -1,22 +1,11 @@
 "use client"
 
-import HomeContent from "@/components/HomeContent";
-import { useAccount } from "wagmi";
+import dynamic from "next/dynamic"
+
+const HomeContent = dynamic(() => import("@/components/HomeContent"), {
+    ssr: false,
+})
 
 export default function Home() {
-  const { isConnected } = useAccount()
-  return (
-    <div>
-      {!isConnected ? (
-        <div>
-          Please connect a wallet...
-        </div>
-      ) : (
-        <div>
-          <HomeContent />
-        </div>
-      )
-      }
-      </div>
-  );
+    return <HomeContent />
 }

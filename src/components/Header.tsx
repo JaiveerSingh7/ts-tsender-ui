@@ -1,14 +1,12 @@
-"use client";
+"use client"
 
-// components/Header.tsx
-import React from "react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export default function Header() {
   // Edit these constants if needed (kept inside so there are NO function inputs)
-  const GITHUB_URL = "https://github.com/your-org/tsender";
+  const GITHUB_URL = "https://github.com/jaiveersingh7/ts-tsender-ui";
   const LOGO_SRC = "/0xjaiveer.png"; // put logo at /public/logo.png (or change path)
 
   return (
