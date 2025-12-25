@@ -5,7 +5,6 @@ import AirdropForm from "@/components/AirdropForm"
 import { useAccount } from "wagmi"
 
 export default function HomeContent() {
-    const [isUnsafeMode, setIsUnsafeMode] = useState(false)
     const { isConnected } = useAccount()
 
     return (
@@ -18,7 +17,7 @@ export default function HomeContent() {
                 </div>
             ) : (
                 <div >
-                    <AirdropForm isUnsafeMode={isUnsafeMode} onModeChange={setIsUnsafeMode} />
+                    <AirdropForm  />
                 </div>
             )}
         </main>
